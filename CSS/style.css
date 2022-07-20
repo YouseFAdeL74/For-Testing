@@ -60,10 +60,16 @@ header .container a span{
 @media(max-width:767px){
   header .container a{
     justify-content: center;
+        flex: 1;
   }
 }
 header .container .social-icon {
   transition: 0.5s;
+}
+@media(max-width:767px){
+  header .container .social-icon {
+    display: none;
+  }
 }
 header .container .social-icon i {
   font-size: 22px;
@@ -102,9 +108,10 @@ header .container .social-icon .facebook:hover{
 }
 @media(max-width:767px){
   .landing::before{
-    right: -190px;
-    transform: rotate(51deg);
-    top: 186px;
+    right: -215px;
+    transform: rotate(53deg);
+    top: 205px;
+    width: 220%;
   }
 }
 .landing .container{
