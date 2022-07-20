@@ -1,0 +1,248 @@
+/* Global Rule's */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body{
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+  width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+  width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+  width: 1170px;
+  }
+}
+/* End Global Rule's */
+/* Start Header */
+header{
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container a{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+header .container a span{
+  color: #ffc107;
+}
+@media(max-width:767px){
+  header .container a{
+    justify-content: center;
+  }
+}
+header .container .social-icon {
+  transition: 0.5s;
+}
+header .container .social-icon i {
+  font-size: 22px;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.5s;
+}
+header .container .social-icon .facebook:hover{
+  transform: translateY(-10px);
+  color: #1877f2;
+}
+/* End Header */
+/* Start Landing */
+.landing{
+  background-color: #c10003;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.landing::before{
+  content: "";
+  width: 200%;
+  height: 300px;
+  position: absolute;
+  background: #a20000;
+  z-index: -1;
+  transform: rotate(28deg);
+  right: -600px;
+}
+@media(max-width:767px){
+  .landing::before{
+    right: -190px;
+    transform: rotate(51deg);
+    top: 186px;
+  }
+}
+.landing .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100% - 72px);
+}
+@media(max-width:767px){
+  .landing .container{
+    flex-direction: column;
+  }
+  .landing .container .image{
+    text-align: center;
+  }
+}
+.landing .container .image{
+  width: 500px;
+  position: relative;
+}
+.landing .container .image .img-home{
+  width: 400px;
+}
+
+@media(max-width:767px){
+  .landing .container .image{
+    width: 380px;
+  }
+}
+.landing .container .image .img-1{
+  position: absolute;
+  left: 51px;
+  top: -10px;
+}
+.landing .container .image .img-2{
+  position: absolute;
+  left: 14px;
+  bottom: -32px;
+}
+.landing .container .image .img-3{
+  right: -20px;
+  position: absolute;
+  top: -15px;
+}
+.landing .container .image .img-4{
+  position: absolute;
+  right: -65px;
+  bottom: -36px;
+  width: 180px;
+}
+.landing .container .image .img-5{
+  position: absolute;
+  right: -65px;
+  top: 30px;
+}
+.landing .container .image .img-6{
+  position: absolute;
+  left: -7px;
+  top: 68px;
+}
+@media(min-width:992px){
+  .landing .container .image .img-1{
+    position: absolute;
+    left: 97px;
+    top: -10px;
+  }
+  .landing .container .image .img-6{
+    position: absolute;
+    left: 37px;
+    top: 57px;
+  }
+  .landing .container .image .img-2{
+    position: absolute;
+    left: 49px;
+    bottom: -23px;
+  }
+}
+.landing .container .text {
+  text-align: center;
+}
+.landing .container .text h2 {
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+}
+@media(max-width:767px){
+  .landing .container .text {
+    margin-top: 50px;
+  }
+  .landing .container .text h2 {
+    font-size: 35px;
+  }
+}
+.landing .container .text h2 span{
+  color: #ffc107;
+}
+.landing .container .text p {
+  margin: 30px 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+}
+@media(max-width:767px){
+  .landing .container .text p{
+    font-size: 18px;
+  }
+}
+@media(max-width:767px){
+  .landing .container .image .img-home{
+    width: 300px;
+  }
+  .landing .container .image .img-1{
+    width: 70px;
+    left: 56px;
+      }
+  .landing .container .image .img-6{
+    width: 70px;
+    left: 10px;
+    top: 30px;
+      }
+  .landing .container .image .img-2{
+    width: 100px;
+    left: 38px;
+    bottom: -25px;
+    }
+  .landing .container .image .img-3{
+    width: 100px;
+    right: 48px;
+      }
+    .landing .container .image .img-4{
+      width: 100px;
+      right: 32px;
+      bottom: -17px;
+    }
+  .landing .container .image .img-5{
+    width: 100px;
+    right: 30px;
+    top: 23px;
+    }
+}
+/* End Landing */
